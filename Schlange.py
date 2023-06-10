@@ -63,26 +63,8 @@ class KeywordTranslator:
     'Tangentbortsstopp': 'KeyboardInterrupt',
     }
     #Dictionary to get name of the exception
-    exception_translations = {
-    'Undantag': 'Exception',
-    'Typfel': 'TypeError',
-    'Värdefel': 'ValueError',
-    'Namnfel': 'NameError',
-    'Indexfel': 'IndexError',
-    'Nyckelfel': 'KeyError',
-    'Syntaxfel': 'SyntaxError',
-    'Indragsfel': 'IndentationError',
-    'FilHittadesEjFel': 'FileNotFoundError',
-    'Nolldivisionsfel': 'ZeroDivisionError',
-    'Överflödsfel': 'OverflowError',
-    'Importfel': 'ImportError',
-    'ModulHittedesEjFel': 'ModuleNotFoundError',
-    'Attributfel': 'AttributeError',
-    'Hävdningsfel': 'AssertionError',
-    'Körningsfel': 'RuntimeError',
-    'Iterationsstopp': 'StopIteration',
-    'Tangentbortsstopp': 'KeyboardInterrupt',
-    }
+    exception_translations = dict((val,key) for key, val in translation_exceptions.items())
+
     errors_with_placeholders = {
     'unsupported operand type': 'nicht unterstützter Operandentyp',
     'division by zero': 'Division durch Null',
